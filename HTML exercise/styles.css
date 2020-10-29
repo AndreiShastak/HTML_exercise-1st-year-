@@ -1,0 +1,213 @@
+﻿body
+{
+	background-color: white;
+	color: black;
+    margin:0px;
+
+}
+@keyframes colorful {
+    0%   {color: floralwhite;}
+    25%  {color: #13310f;}
+    50%  {color: #643c0b;}
+    100% {color: floralwhite;}
+}
+h1.naglowek
+{
+	font-style:normal;
+    font-family:'Times New Roman';
+	text-align:center;
+    font-size:60px;
+    margin-top:0px;
+    padding-top:50px;
+    color:#643c0b;
+    text-shadow: 2px 1px 1px black;
+    animation-name: colorful;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+h2.naglowek
+{
+	font-style:normal;
+    font-family:'Times New Roman';
+	text-align:left;
+    font-size:40px;
+    margin-top:0px;
+    padding-top:50px;
+    color:#643c0b;
+    text-shadow: 2px 1px 1px black;
+    animation-name: colorful;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+p
+{
+	font-size:larger;
+	color:Black;
+}
+
+table
+{
+	text-align:center;
+    border: 2px solid brown;
+    color:black;
+    text-shadow: 1px 1px 1px ;
+    background-color:navajowhite;
+    float: left;
+    border-spacing:4px;
+}
+tr, td, th
+{
+	border: 2px dotted black;
+    padding:15px;
+}
+th
+{
+	background-color: saddlebrown;
+    color:white;
+}
+
+
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    background-color: #643c0b;
+    text-align:center;
+}
+li.menu {
+    display:inline-block;
+    font-size: 30px;
+    min-width:150px;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn,a.selected {
+    background-color: #e4ce1f;
+    color:black;
+}
+li.dropdown {
+    display: inline-block;
+}
+.rel{
+    position:relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.box{
+    min-height:100px;
+    border: 2px solid black;
+	border-collapse:collapse;
+    margin: 20px;
+    color:black;
+    text-shadow: 1px 1px 1px ;
+    background: rgba(255,245,215,0.5);
+    float: left;
+}
+
+.box2{
+    min-height:100px;
+    border: 2px solid black;
+	border-collapse:collapse;
+    margin: 20px;
+    color:black;
+    text-shadow: 1px 1px 1px ;
+    background-color:green;
+    float: left;
+}
+
+
+.floating {
+    position: absolute;
+    bottom: 30px;
+    font-style: italic;
+    text-decoration-color: #f1f1f1;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+
+
+
+
+.gallery{
+    margin: auto;
+    background: rgba(255,245,215,0.2);
+    border: solid 2px #13310f;
+    display:table;
+}
+img.imagemin {
+        width: 150px;
+        height: auto;
+        display: inline-block;
+    }
+@media all and (max-width: 100%) {
+    img.imagemin {
+        width: 15vw;
+        height: auto;
+        display: inline-block;
+         
+    }
+}
+
+
+#dokument
+{
+    width: 100vw;
+	height:100vh;
+	margin: 0px;
+	overflow: auto;
+}
+#tresc{
+    float:left;
+	min-width:99vw;
+    min-height:100vh;
+
+    background-image:url("jpg/wood1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#menu
+{
+    background-image:url("jpg/wood3.jpg");
+}
+#naglowek{
+    height: 200px;
+
+    background-image:url("jpg/wood3.jpg");
+}
+#stopka {
+    text-align:center;
+    background-color: #0b1b09;
+    color:white;
+    float:left;
+    min-width:99.14vw;
+    height: 100px;
+
+}

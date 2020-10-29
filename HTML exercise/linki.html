@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl-PL" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Linki</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="js/localS.js"></script>
+    <script src="js/sessionS.js"></script>
+    <script src="js/modif.js"></script>
+</head>
+<body onLoad="javascript: loadTextColor(); javascript: loadBgColor();">
+    <div id="dokument">
+        <div id="naglowek">
+            <h1 class="naglowek">
+                My Hobby
+            </h1>
+        </div>
+        <div id="menu">
+            <ul class="menu">
+                <li class="menu"><a href="index.html">Main</a></li>
+                <li class="menu"><a href="tabele.html">Tables</a></li>
+                <li class="menu dropdown">
+                    <a class="selected" href="linki.html">Buy</a>
+                    <div class="rel">
+                        <div class="dropdown-content">
+                            <a href="http://www.mortarinvestments.eu/products/tanks-2/t-72-42#currency=USD" target="_blank">T-72</a>
+                            <a href="http://www.mortarinvestments.eu/products/tanks-2/bmp-1--bvp-1--with-a-turret-380#currency=USD" target="_blank">BMP-1</a>
+                            <a href="http://www.mortarinvestments.eu/products/tanks-2/2s1-gvozdika-280#currency=USD" target="_blank">2S1 Gvozdika</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="tresc">
+            <div id="sessionSID" class="box" style="width:400px">
+                <p><a href="http://www.mortarinvestments.eu/products/tanks-2/t-72-42#currency=USD" target="_blank">T-72</a><br /></p>
+                <p><a href="http://www.mortarinvestments.eu/products/tanks-2/bmp-1--bvp-1--with-a-turret-380#currency=USD" target="_blank">BMP-1</a><br /></p>
+                <p><a href="http://www.mortarinvestments.eu/products/tanks-2/2s1-gvozdika-280#currency=USD" target="_blank">2S1 Gvozdika</a><br /></p>
+                <p id="localSID">Wchodząc w te linki nie opuścisz tej strony, strony otworzą się w nowej karcie</p>
+            </div>
+            <div class="box">
+                <select id="color_list">
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="gray">Gray</option>
+                    <option value="orange">Orange</option>
+                </select>
+
+                <input type="button" value="Change color" onClick="javascript:setTextColor();" /><br />
+                <select id="color_listBg">
+                    <option value="navajowhite">Beige</option>
+                    <option value="white">White</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                </select>
+
+                <input type="button" value="Change Background" onClick="javascript:setBgColor();" /><br />
+                <input type="button" value="Add Table" onClick="javascript:AddBlok();" /><br />
+            </div>
+        </div>
+        <div class="floating">
+            <p><a href="#naglowek">To the title</a></p>
+        </div>
+        <div id="stopka">
+            <br><br>
+            Andrei Shastak s165666
+        </div>
+    </div>
+</body>
+</html>

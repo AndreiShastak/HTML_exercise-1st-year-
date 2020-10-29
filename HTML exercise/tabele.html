@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl-PL" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tables</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+
+    <script>
+        $(function () {
+            var
+                Name = $("#nam"),
+                Technicaldata = $("#tech"),
+                Price = $("#price");
+
+
+            function AddRow() {
+                $("#TableVeh tbody").append("<tr>" +
+                  "<td>" + Name.val() + "</td>" +
+                  "<td>" + Technicaldata.val() + "</td>" +
+                  "<td>" + Price.val() + "</td>" +
+                "</tr>");
+				console.log("adding row");
+                dialog.dialog("close");
+            }
+
+            dialog = $("#dialog-okno").dialog({
+                autoOpen: false,
+                height: 300,
+                width: 450,
+                modal: true,
+                buttons: {
+                    "New String": AddRow,
+                }
+            });
+
+            $("#AddTableRow").button().on("click", function () {
+                dialog.dialog("open");
+				console.log("adding row window opened");
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#okno2").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "slide",
+                    duration: 200
+                },
+                hide: {
+                    effect: "slide",
+                    duration: 100
+                }
+            });
+            $("#infoButton").click(function () {
+                $("#okno2").dialog("open");
+				console.log("info clicked");
+            });
+        });
+    </script>
+    <script>
+  $( function() {
+      $( "#draggable" ).draggable({ revert: false , containment: "parent" });
+  } );
+    </script>
+</head>
+<body>
+    <div id="dokument">
+        <div id="dialog-okno" title="Add String">
+            <form>
+                <fieldset>
+                    <label for="nam">Name</label>
+                    <input type="text" name="nam" id="nam" class="text ui-widget-content u"><br />
+                    <label for="tech">Technical data</label>
+                    <input type="text" name="tech" id="tech" class="text ui-widget-content "><br />
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price" class="text ui-widget-content"><br />
+                </fieldset>
+            </form>
+        </div>
+        <div id="okno2" title="info">Andrei Shastak<br />Projekt WAI nr 1</div>
+        <div id="naglowek">
+            <h1 class="naglowek">
+                My Hobby
+            </h1>
+        </div>
+        <div id="menu">
+            <ul class="menu">
+                <li class="menu"><a href="index.html">Main</a></li>
+                <li class="menu"><a class="selected" href="tabele.html">Table</a></li>
+                <li class="menu dropdown">
+                    <a href="linki.html">Buy</a>
+                    <div class="rel">
+                        <div class="dropdown-content">
+                            <a href="http://www.mortarinvestments.eu/products/tanks-2/t-72-42#currency=USD" target="_blank">T-72</a>
+                            <a href="http://www.mortarinvestments.eu/products/tanks-2/bmp-1--bvp-1--with-a-turret-380#currency=USD" target="_blank">BMP-1</a>
+                            <a href="http://www.mortarinvestments.eu/products/tanks-2/2s1-gvozdika-280#currency=USD" target="_blank">2S1 Gvozdika</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="tresc">
+            <table id="TableVeh" class="ui-widget ui-widget-content">
+                <caption>Popular shipments</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Technical data</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>T-72</td>
+                        <td>                            Length:9,240 mm
+                            Width: 4,750 mm 
+                            Height:2,370 mm
+                            Land clearance: 470 mm
+                            Full weight: 44 000 kg
+                            Crew: 3
+                        Engine:V-46 12 cylinders, 840 hp, diesel
+                        Gun: 125 2A 46 mm canon (8 shots/min.)</td>
+                        <td>$50097 </td>
+                    </tr>
+                    <tr>
+                        <td>BMP-1</td>
+                        <td>                            Weight: 13.5 tonnesLength: 6.74
+                            Width: 2.94 m
+                            Height: 2.15 m
+                            Crew: 3 (+8 passengers)
+                            Armour 33 mm (max)
+                            Primary armament: 73 mm smoothbore gun (2A28) AT-3/4/5 ATGM
+                            Secondary armament 7.62 mm machine gun (PKT)
+</td>
+                        <td>$38965 </td>
+                    </tr>
+                    <tr>
+                        <td>2S1 Gvozdika</td>
+                        <td>                            Combat weight: 15 700 kg
+                            Combat crew: 4 (commander, gunner, loader, driver)
+                            Floating range: 300 m
+
+                            Engine:
+
+                            8-cylinder supercharging compression-ignition JaMZ-238N
+                            Weight: 1 010 kg</td>
+                        <td>$22266 </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+
+            <div class="box">
+                <p>Feedback</p>
+                <form action="mailto:s165666@pg.gda.pl?subject=Projekt%20HiH%20Ankieta" enctype="text/plain" method="post">
+                    <label>Name: <input name="name" /></label><br>
+                    <label>Surname: <input name="surname" /></label><br><br>
+                    You need:<br>
+                    <label>
+                        <input type="radio" name="exp" id="lic" value="export license" /> export license<br>
+                    </label>
+                    <label>
+                        <input type="radio" name="exp" id="dem" value="demilitarization" /> demilitarization<br>
+                    </label><br>
+                    Optional:<br>
+                    <label>
+                        <input type="checkbox" name="cons" value="consultation">consultation <br>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="draw" value="draw up and execute">draw up and execute <br />
+                    </label>
+                    <label>
+                        <input type="checkbox" name="trans" value="transportation">transportation<br>
+                    </label>
+                    <br /><br />
+                    <textarea name="message" style="width: 365px; height: 132px">offers</textarea><br />
+                    <input type='reset' value='Reset' name='reset' onclick="return resetForm(this.form);">
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+            <div class="box">
+                <button id="AddTableRow">New string</button><br />
+                <button id="infoButton">Information</button>
+            </div>
+            <div id="draggable" class="box">
+                <p>You can ask here:</p>
+                <a href="mailto:s165666@pg.gda.pl?subject=Projekt%20HiH">s165666@pg.gda.pl</a>
+                <p>pull over</p>
+                <br>
+            </div>  
+        </div>
+        <div class="floating">
+            <p><a href="#naglowek">To the title</a></p>
+        </div>
+        <div id="stopka">
+            <br><br>
+            Andrei Shastak s165666
+        </div>
+    </div>
+</body>
+</html>
